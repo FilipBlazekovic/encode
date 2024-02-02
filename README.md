@@ -7,7 +7,21 @@ Based on [RFC 4638](https://www.rfc-editor.org/rfc/pdfrfc/rfc4648.txt.pdf).
 Building:
 
 ```
-    TODO
+git clone git@github.com:FilipBlazekovic/encode.git
+
+cd encode
+
+cmake -B build -S .
+
+cmake --build build --target encode
+
+sudo cmake --install build
+```
+```
+To change install location of encode.h and libencode.a change the following two properties in CMakeLists.txt:
+
+set(HEADERS_DESTINATION ${CMAKE_INSTALL_INCLUDEDIR})
+set(LIBRARY_DESTINATION ${CMAKE_INSTALL_LIBDIR})
 ```
 
 Usage:
